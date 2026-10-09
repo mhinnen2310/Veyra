@@ -13,9 +13,19 @@ Veyra is an independent, client-side graphics project for **Minecraft Java Editi
 
 ## Native renderer showcase
 
-The upcoming screenshot gallery contains **only captures of Veyra's own native renderer**, not external shaderpacks. Planned scenes include water reflections, a nighttime village, a sea-lantern-lit interior, lava lighting and an experimental tinted-glass test. These are development previews, not claims of flawless effects or proven visual accuracy.
+These are unedited, in-game captures of **Veyra's native Vulkan renderer**, not screenshots of third-party shaderpacks. They show work-in-progress rendering and are not claims of complete visual accuracy.
 
-*Screenshots are being prepared for upload.*
+![Veyra native renderer — screenshot 1](assets/screenshots/veyra-native-01.png)
+
+![Veyra native renderer — screenshot 2](assets/screenshots/veyra-native-02.png)
+
+![Veyra native renderer — screenshot 3](assets/screenshots/veyra-native-03.png)
+
+![Veyra native renderer — screenshot 4](assets/screenshots/veyra-native-04.png)
+
+![Veyra native renderer — screenshot 5](assets/screenshots/veyra-native-05.png)
+
+*Development screenshots. Rendering, visual quality and performance are subject to change.*
 
 ## Current shaderpack compatibility baseline
 
