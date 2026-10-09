@@ -6,7 +6,7 @@
 
 Veyra is an independent Minecraft graphics project built around **modern rendering, performance, and future creator tools**. The current development build combines a native Vulkan renderer with experimental support for existing Iris/OptiFine-format shaderpacks.
 
-**At a glance:** Native Vulkan rendering with hardware ray tracing · Support for existing shaderpacks through Vulkan · Optional FSR upscaling across native and Legacy rendering · Experimental frame generation.
+**At a glance:** Native Vulkan rendering with hardware ray tracing · Support for existing shaderpacks through Vulkan · FSR 3.1 upscaling and frame generation implemented for native rendering · Experimental Legacy frame generation support.
 
 The longer-term direction is a graphics platform where shader creators can build **Veyra-native shaders** and players can choose how to use their hardware — from advanced ray-traced effects to more conventional rendering.
 
@@ -61,7 +61,7 @@ These results are primarily from **Windows x64 on an AMD Radeon RX 9070**, not a
 | Native image quality | Motion-related noise, some night/cave lighting artefacts, and foliage shimmer still need work. |
 | Water and materials | Some scenes and material combinations still need in-game validation and refinement. |
 | Legacy compatibility | Not all shaderpacks, settings, or visual effects match their behaviour in Iris. |
-| Upscaling and frame generation | Frame generation is experimental. Motion data and presentation behaviour are incomplete in some situations, especially with Legacy packs. |
+| Frame generation | Implemented and tested in native rendering. Legacy support remains experimental; motion data and presentation behaviour still need further validation. |
 | Stability | Resourcepack reloads, shader-setting changes, and longer sessions need additional testing. |
 | Performance | Results vary by shaderpack and configuration; optimization and broader GPU testing are ongoing. |
 
@@ -95,7 +95,7 @@ Legacy packs can be run at **native resolution without frame generation or upsca
 - **Primary test hardware:** AMD Radeon RX 9070 on Windows x64
 - **Rendering modes:** Legacy, No RT, Low RT, Hero, Ultra
 - **Upscaling:** Off/native, FSR 1, FSR 3.1, Native AA
-- **Frame generation:** optional, experimental
+- **Frame generation:** implemented for native rendering; experimental in Legacy
 
 The native renderer uses a hybrid approach, combining rasterized scene data with Vulkan hardware ray queries. Legacy mode is a separate rendering path for existing shaderpack formats.
 
