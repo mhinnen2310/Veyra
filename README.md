@@ -1,48 +1,26 @@
 # Veyra
 
-**A new way to explore Minecraft graphics, built on Vulkan.**
+**Vulkan-based graphics for Minecraft Java Edition.**
 
-> In development · Closed alpha testers wanted · No public build yet
+> **In development · Closed alpha planned · Testers wanted**
 
-Veyra is a Vulkan-based graphics project for **Minecraft Java Edition**. It combines a native renderer with hardware ray-traced effects and experimental support for existing shaderpacks.
+Veyra is an independent Minecraft graphics project built around **modern rendering, performance, and future creator tools**. The current development build combines a native Vulkan renderer with experimental support for existing Iris/OptiFine-format shaderpacks.
 
-The longer-term aim is to build a graphics platform that serves both players and shader creators.
+The longer-term direction is a graphics platform where shader creators can build **Veyra-native shaders** and players can choose how to use their hardware — from advanced ray-traced effects to more conventional rendering.
 
 ## Project direction
 
-Veyra is being developed with three goals in mind:
+Veyra's development has three main areas:
 
-- **Modern rendering:** continue improving native lighting, reflections, materials, and other graphics features.
-- **Choice for players:** support different hardware and preferences, from advanced native rendering to familiar shaderpacks, with optional upscaling and frame generation.
-- **Tools for creators:** work toward a Veyra-native shader format and tools that let shader developers use modern rendering features directly.
+- **Rendering:** native ray-traced lighting, reflections, water, atmospheric effects, and physically based materials.
+- **Performance:** flexible quality settings, optional upscaling and frame generation, and future work on rendering-pipeline efficiency. Broader engine-level optimization is a goal, not an existing feature.
+- **Creator tools:** a planned Veyra-native shader path and tools for building and testing shaders with modern rendering features.
 
-The creator tools and Veyra-native shader format are **long-term plans**, not available features. Development currently focuses on the renderer, shader compatibility, image quality, and stability.
+The intention is to improve the rendering technology and creator tools over time rather than treating the first release as a finished endpoint.
 
-## Rendering options
+## Native renderer showcase
 
-### Native renderer
-
-Veyra's native Vulkan renderer includes hardware ray tracing, indirect lighting, soft shadows, reflections, water and glass effects, material-aware shading, and atmospheric effects.
-
-It also offers **FSR 3.1 upscaling**, **Native AA**, and experimental **frame generation**, depending on hardware and settings. These are optional: players can render at native resolution or use reconstruction features when they want to trade some image quality for performance. Frame generation improves displayed frame rate, not game simulation speed or input latency.
-
-### Legacy shaderpacks
-
-The experimental Legacy renderer can run existing Iris/OptiFine-format shaderpacks through Vulkan, without Iris or OptiFine installed.
-
-Players can use compatible packs at native resolution or choose upscaling and experimental frame generation where supported. Shader compatibility and visual accuracy are still being improved.
-
-### Future creator support
-
-Over time, I want shader developers to be able to create **Veyra-native shaders** that work with the platform's rendering capabilities. The aim is to develop the shader format and creator tools alongside the renderer, rather than treat them as a one-off feature.
-
-## Current focus
-
-The next steps are better visual consistency, broader Legacy compatibility, more performance testing, and feedback from closed alpha testers. These results will help shape the longer-term creator platform.
-
-## Native renderer screenshots
-
-Here are five in-game screenshots of Veyra's native renderer.
+In-game screenshots of Veyra's native renderer.
 
 ![Veyra native renderer — screenshot 1](assets/screenshots/veyra-native-01.png)
 
@@ -54,38 +32,86 @@ Here are five in-game screenshots of Veyra's native renderer.
 
 ![Veyra native renderer — screenshot 5](assets/screenshots/veyra-native-05.png)
 
-## Shaderpacks tested so far
+## Development status
 
-These four versions have been **manually tested on my development PC** and have launched, rendered, and remained playable during normal gameplay:
+**Snapshot: 9 October 2026 · Internal development version: 0.15.0**
 
-| Shaderpack | Version |
+This section separates features already implemented and tested in development from experimental features, known issues, and longer-term plans.
+
+### Implemented and tested in development
+
+| Area | Current state |
+| --- | --- |
+| Native Vulkan renderer | Running with hybrid raster rendering and hardware ray-traced effects on the primary development PC. |
+| Native lighting and effects | Ray-traced lighting, indirect illumination, shadows, reflections, water, glass, and atmospheric effects are implemented. |
+| Graphics settings | Presets, custom settings, and a profiler are implemented. |
+| Native resolution | Native rendering is available without upscaling or frame generation. |
+| Upscaling | FSR 1 and FSR 3.1 reconstruction paths are implemented; FSR 3.1 has targeted GPU validation. |
+| Materials | LabPBR/oldPBR support, material controls, and an optional experimental material preview are implemented. |
+| Legacy shaderpacks | Selected existing shaderpacks launch, render, and remain playable in development tests. |
+
+These results are primarily from **Windows x64 on an AMD Radeon RX 9070**, not a complete hardware compatibility test.
+
+### Experimental or still being improved
+
+| Area | What remains |
+| --- | --- |
+| Native image quality | Motion-related noise, some night/cave lighting artefacts, and foliage shimmer still need work. |
+| Water and materials | Some scenes and material combinations still need in-game validation and refinement. |
+| Legacy compatibility | Not all shaderpacks, settings, or visual effects match their behaviour in Iris. |
+| Upscaling and frame generation | Frame generation is experimental. Motion data and presentation behaviour are incomplete in some situations, especially with Legacy packs. |
+| Stability | Resourcepack reloads, shader-setting changes, and longer sessions need additional testing. |
+| Performance | Results vary by shaderpack and configuration; optimization and broader GPU testing are ongoing. |
+
+### Not available yet / future development
+
+- **Veyra-native shader authoring:** a dedicated shader format and creator tooling are planned but not released.
+- **Rendering-pipeline optimization:** broader CPU/GPU efficiency work, such as improved geometry handling and culling, is a future development direction rather than a completed optimization layer.
+- **Broad hardware validation:** support beyond the main development configuration has not yet been established.
+- **DLSS and XeSS:** not implemented.
+- **Public release:** no public build is available yet.
+
+## Legacy shaderpacks: current test baseline
+
+The following versions have been manually tested on the main development PC and reported to launch, render, and remain playable in normal gameplay.
+
+| Shaderpack | Tested version |
 | --- | --- |
 | Complementary Unbound | r5.9.3 |
 | Sildur's Vibrant Shaders | v2.02 Extreme-VL |
 | MakeUp UltraFast | 9.5g |
 | BSL | v10.1.8 |
 
-That's a starting point, not a full compatibility list. I'm still checking visual differences, individual settings, longer sessions, and how things behave on other hardware.
+Legacy packs can be run at **native resolution without frame generation or upscaling**. Optional reconstruction is implemented; Legacy frame generation is still experimental. A pack appearing in the table means it has a working test baseline, not that every option or scene is visually identical to Iris.
 
-## Current development setup
+## Technical overview
 
-- **Minecraft:** Java Edition 26.3
+- **Minecraft target:** Java Edition 26.3
 - **Mod loader:** NeoForge 26.3.0.45-beta
 - **Java:** 25
 - **Graphics API:** Vulkan
-- **Main test system:** Windows x64, AMD Radeon RX 9070
+- **Primary test hardware:** AMD Radeon RX 9070 on Windows x64
+- **Rendering modes:** Legacy, No RT, Low RT, Hero, Ultra
+- **Upscaling:** Off/native, FSR 1, FSR 3.1, Native AA
+- **Frame generation:** optional, experimental
 
-## Help test Veyra
+The native renderer uses a hybrid approach, combining rasterized scene data with Vulkan hardware ray queries. Legacy mode is a separate rendering path for existing shaderpack formats.
 
-I'm preparing a **small closed alpha** and looking for people who want to help test it — especially on different GPUs and with different shaderpacks.
+## What comes next
 
-I'm interested in what works, what breaks, how performance compares, and where the visuals need attention. Real feedback will help me figure out what to focus on next.
+The immediate focus is **rendering stability, visual quality, Legacy compatibility, and performance testing** across more configurations. Feedback from the closed alpha will help determine priorities.
 
-**Want to get involved?** Join the Discord and visit **#alpha-testing** to register your interest.
+Longer-term development is intended to cover efficient rendering, a Veyra-native shader system, and creator tools. These are development goals, not announced release commitments.
+
+## Closed alpha — testers wanted
+
+A small closed alpha is being prepared to gather feedback on image quality, shaderpack behaviour, stability, and performance on different hardware.
+
+To register interest, join the Discord and visit **#alpha-testing**.
 
 **[Join the Veyra Discord — Closed Alpha](https://discord.gg/aFFZhCYBSV)**
 
-I'll select testers manually as the alpha becomes ready. There isn't a public download yet, and joining Discord doesn't guarantee a test spot.
+Testing places will be selected manually. There is no public download yet.
 
 ---
 
