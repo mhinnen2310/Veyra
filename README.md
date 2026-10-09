@@ -59,8 +59,4 @@ A limited, manually selected closed alpha is planned. The goal is to test stabil
 
 Alpha access is limited and testers will be selected manually. Joining the server does not guarantee a testing slot. **No public download is available yet.**
 
-## Source code and rights
-
-Veyra's development source code is **private** and is not distributed through this showcase repository. No public binaries or blanket redistribution permission are provided here. Third-party shaderpacks remain the property of their respective authors.
-
 Veyra is an independent project, not affiliated with Mojang Studios or Microsoft.
