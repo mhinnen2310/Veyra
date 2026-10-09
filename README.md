@@ -1,7 +1,5 @@
 ![Veyra banner](assets/screenshots/veyra_water_banner.png)
 
-# Veyra
-
 **Vulkan-based graphics for Minecraft Java Edition.**
 
 > **In development · Closed alpha planned · Testers wanted**
