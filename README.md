@@ -109,9 +109,9 @@ Longer-term development is intended to cover efficient rendering, a Veyra-native
 
 A small closed alpha is being prepared to gather feedback on image quality, shaderpack behaviour, stability, and performance on different hardware.
 
-To be considered for testing, simply join the Veyra Discord. No application or other action is required at this stage.
+Interested in joining the closed alpha? Join the Veyra Discord. A link to the hardware information form will be posted in the **#announcements** channel. Completing the form puts you in the pool of potential testers.
 
-The Veyra team will contact potential testers directly and invite them to complete an optional hardware information form. Testers will then be selected manually based on the information provided, with the aim of testing Veyra across different hardware configurations.
+Testers will be selected manually based on the submitted hardware information, with the aim of testing Veyra across different configurations. Filling out the form does not guarantee a testing spot.
 
 **[Join the Veyra Discord — Closed Alpha](https://discord.gg/aFFZhCYBSV)**
 
