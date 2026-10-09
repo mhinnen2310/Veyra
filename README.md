@@ -62,7 +62,7 @@ These results are primarily from **Windows x64 on an AMD Radeon RX 9070**, not a
 | Water and materials | Some scenes and material combinations still need in-game validation and refinement. |
 | Legacy compatibility | Not all shaderpacks, settings, or visual effects match their behaviour in Iris. |
 | Frame generation | Implemented and tested in native rendering. Legacy support remains experimental; motion data and presentation behaviour still need further validation. |
-| Stability | Resourcepack reloads, shader-setting changes, and longer sessions need additional testing. |
+| Stability | Resourcepack reloads and shader-setting changes still need further validation. |
 | Performance | Results vary by shaderpack and configuration; optimization and broader GPU testing are ongoing. |
 
 ### Not available yet / future development
