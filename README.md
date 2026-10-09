@@ -65,7 +65,7 @@ These four versions have been **manually tested on my development PC** and have 
 | MakeUp UltraFast | 9.5g |
 | BSL | v10.1.8 |
 
-That's a starting point, not a full compatibility list. I'm still checking visual differences, individual settings, longer sessions, and how things behave on other hardware. Shaderpacks aren't included with Veyra.
+That's a starting point, not a full compatibility list. I'm still checking visual differences, individual settings, longer sessions, and how things behave on other hardware.
 
 ## Current development setup
 
