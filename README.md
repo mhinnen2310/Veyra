@@ -42,7 +42,7 @@ Some packs already launch and render in Veyra. Compatibility is still a work in 
 
 ## Native renderer screenshots
 
-Here are five **unedited in-game screenshots from Veyra's native renderer** — not from third-party shaderpacks. They show the renderer as it looks during development.
+Here are five in-game screenshots of Veyra's native renderer.
 
 ![Veyra native renderer — screenshot 1](assets/screenshots/veyra-native-01.png)
 
