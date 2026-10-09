@@ -4,49 +4,41 @@
 
 > In development · Closed alpha testers wanted · No public build yet
 
-Veyra is an independent graphics project for **Minecraft Java Edition**, built around Vulkan. Today, it brings together a native renderer with hardware ray-traced effects and an experimental way to run existing shaderpacks. But that's only the beginning of what I want Veyra to become.
+Veyra is a Vulkan-based graphics project for **Minecraft Java Edition**. It combines a native renderer with hardware ray-traced effects and experimental support for existing shaderpacks.
 
-## The vision: a graphics platform for Minecraft
+The longer-term aim is to build a graphics platform that serves both players and shader creators.
 
-I don't want Veyra to end as just another graphics mod with a fixed set of effects. My goal is to build a **platform that players and creators can grow with**.
+## Project direction
 
-For players, that means more ways to experience Minecraft: from native rendering with advanced lighting and materials, to familiar shaderpacks running through Vulkan, with control over how much work the GPU does.
+Veyra is being developed with three goals in mind:
 
-For creators, the bigger ambition is a new generation of **Veyra shaders**: shaders designed to build on the platform's rendering technology rather than being limited to today's legacy shader formats. I want shader developers to be able to experiment with modern techniques and eventually have tools that make creating, testing, and refining those effects easier.
+- **Modern rendering:** continue improving native lighting, reflections, materials, and other graphics features.
+- **Choice for players:** support different hardware and preferences, from advanced native rendering to familiar shaderpacks, with optional upscaling and frame generation.
+- **Tools for creators:** work toward a Veyra-native shader format and tools that let shader developers use modern rendering features directly.
 
-Just as important, I want the platform itself to keep moving forward. Rendering methods, shader capabilities, material systems, and creator tools should be things we continue improving — not features we implement once and leave untouched.
+The creator tools and Veyra-native shader format are **long-term plans**, not available features. Development currently focuses on the renderer, shader compatibility, image quality, and stability.
 
-**That creator ecosystem is a long-term goal, not a toolset I'm claiming is ready today.** The current development work is laying the rendering and compatibility groundwork for it.
-
-## Built for different ways to play
-
-Advanced rendering can be demanding, and not everyone wants or needs the same setup. I want Veyra to offer meaningful choices rather than a single graphics mode.
+## Rendering options
 
 ### Native renderer
 
-Veyra's own Vulkan renderer is being developed around hardware ray tracing, indirect lighting, soft shadows, reflections, water and glass, material-aware shading, and atmospheric effects. It's the place where I can explore rendering techniques directly and keep expanding the visual toolkit.
+Veyra's native Vulkan renderer includes hardware ray tracing, indirect lighting, soft shadows, reflections, water and glass effects, material-aware shading, and atmospheric effects.
 
-The current renderer also includes **FSR 3.1 upscaling**, **Native AA**, and experimental **frame generation**. These are options, not requirements: the aim is to let players choose the balance between image quality and performance that makes sense for their hardware. Frame generation can increase displayed frame rate, but doesn't increase game simulation speed or make input more responsive.
+It also offers **FSR 3.1 upscaling**, **Native AA**, and experimental **frame generation**, depending on hardware and settings. These are optional: players can render at native resolution or use reconstruction features when they want to trade some image quality for performance. Frame generation improves displayed frame rate, not game simulation speed or input latency.
 
 ### Legacy shaderpacks
 
-Veyra also has an experimental **Legacy** renderer for existing Iris/OptiFine-format shaderpacks, without requiring Iris or OptiFine to be installed.
+The experimental Legacy renderer can run existing Iris/OptiFine-format shaderpacks through Vulkan, without Iris or OptiFine installed.
 
-I want players to be able to keep using the shaders they already enjoy, including **at native resolution without upscaling or frame generation**. Those features can also be useful as optional performance tools when running Legacy packs on less powerful hardware.
+Players can use compatible packs at native resolution or choose upscaling and experimental frame generation where supported. Shader compatibility and visual accuracy are still being improved.
 
-Some shaderpacks already launch and render in Veyra. Getting broader compatibility — including the visual details and settings that make each pack unique — is ongoing work.
+### Future creator support
 
-### Future Veyra shaders and creator tools
+Over time, I want shader developers to be able to create **Veyra-native shaders** that work with the platform's rendering capabilities. The aim is to develop the shader format and creator tools alongside the renderer, rather than treat them as a one-off feature.
 
-Legacy compatibility matters, but it isn't the end goal for shader creation. The longer-term plan is to develop a **Veyra-native shader path** that creators can build for directly, with access to modern rendering capabilities and an evolving set of creator tools.
+## Current focus
 
-I want this to grow through experimentation and feedback from shader developers. The exact format, APIs, tooling, and release milestones still need to be designed and proven; Veyra-native shader authoring is **not yet being presented as a finished or publicly available feature**.
-
-## Where development goes next
-
-Right now, the priorities are improving the native renderer's visual quality and stability, testing Legacy shaderpacks more thoroughly, and measuring performance on different hardware. The closed alpha will help identify what works well and what still needs attention.
-
-From there, the broader direction is to expand the rendering foundation, improve scalability across hardware, and develop the creator-facing side of Veyra over time. I want the platform to keep evolving alongside new graphics techniques and the people building with them.
+The next steps are better visual consistency, broader Legacy compatibility, more performance testing, and feedback from closed alpha testers. These results will help shape the longer-term creator platform.
 
 ## Native renderer screenshots
 
