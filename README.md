@@ -4,9 +4,25 @@
 
 > In development · Closed alpha testers wanted · No public build yet
 
-I'm building Veyra because I want to explore what Minecraft rendering can look like with Vulkan — both with a renderer built specifically for Veyra and with the shaderpacks the community already knows.
+Veyra is an independent, client-side **graphics project for Minecraft Java Edition**, built around Vulkan. It isn't a new shaderpack. It's a rendering layer with its own graphics features, settings, and experimental support for existing shaderpacks.
 
-Veyra is a client-side graphics project for **Minecraft Java Edition**, with two parts that I'm developing side by side.
+The idea started with a question: **what if Minecraft had a graphics platform that could grow beyond a single shaderpack or one rendering technique?**
+
+I'm working on two approaches in the same project: Veyra's own native renderer and a Legacy renderer for community shaderpacks. Both are still in development, but they're steps toward a bigger goal: giving players more choice over how Minecraft looks and runs.
+
+## What I'm trying to build
+
+My long-term goal is for Veyra to become a **flexible graphics platform for Minecraft**, not just a collection of visual effects.
+
+That means working toward:
+
+- **More rendering choice:** continue developing native Vulkan rendering while improving the ability to use existing shaderpacks through the Legacy renderer.
+- **Better materials:** build on normal maps, specular maps, LabPBR support, and experimental material generation so blocks can respond more convincingly to light.
+- **Controls that matter:** give players understandable quality presets and deeper controls for lighting, reflections, reconstruction, and other effects.
+- **A wider range of hardware:** test different GPUs and find sensible ways to scale graphics quality. Hardware support and performance still need real-world validation.
+- **A foundation that can keep evolving:** improve the renderer's architecture, visual consistency, and compatibility rather than treating any one visual feature as the finish line.
+
+Those are **directions I'm working toward, not a promised feature list or release schedule**. The near-term priority is getting the current renderer stable, improving image quality and performance, and learning from testers.
 
 ## Two ways to render
 
