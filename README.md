@@ -53,7 +53,11 @@ This intentionally limited baseline **does not guarantee** full visual parity wi
 
 A limited, manually selected closed alpha is planned. The goal is to test stability, rendering differences, shaderpack behavior, performance, and different GPU configurations.
 
-There is **no public download or open registration yet**. Watch this repository for updates. A Discord invitation and tester application details will be added when available.
+**Interested in testing Veyra?** Join the community Discord to register your interest in the closed alpha and follow tester-selection updates.
+
+**[Join the Veyra Discord — Apply for Closed Alpha](https://discord.gg/aFFZhCYBSV)**
+
+Alpha access is limited and testers will be selected manually. Joining the server does not guarantee a testing slot. **No public download is available yet.**
 
 ## Source code and rights
 
