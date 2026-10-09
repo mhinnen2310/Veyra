@@ -1,19 +1,32 @@
 # Veyra
-**Minecraft graphics on Vulkan — native ray-traced rendering and experimental support for existing shaderpacks.**
 
-> **In active development · Closed alpha planned · No public download yet**
+**A new way to explore Minecraft graphics, built on Vulkan.**
 
-Veyra is an independent, client-side graphics project for **Minecraft Java Edition**. It explores two complementary ways to render Minecraft on Vulkan: an in-house renderer for ray-traced effects and an experimental **Legacy** renderer for existing Iris/OptiFine-format shaderpacks.
+> In development · Closed alpha testers wanted · No public build yet
 
-## What Veyra does
+I'm building Veyra because I want to explore what Minecraft rendering can look like with Vulkan — both with a renderer built specifically for Veyra and with the shaderpacks the community already knows.
 
-**Native renderer:** Configurable ray-traced lighting and indirect illumination, soft shadows, reflections, water and glass effects, material-aware shading, and atmospheric effects. Veyra also includes experimental **FSR 3.1 upscaling**, **Native AA**, and optional **frame generation**. Availability depends on the GPU and configuration. Generated frames do not improve simulation speed or input responsiveness.
+Veyra is a client-side graphics project for **Minecraft Java Edition**, with two parts that I'm developing side by side.
 
-**Legacy shaderpacks on Vulkan:** An experimental way to load existing shaderpacks without needing Iris or OptiFine installed. Shader compatibility and visual accuracy are still under development.
+## Two ways to render
 
-## Native renderer showcase
+### Native rendering
 
-These are unedited, in-game captures of **Veyra's native Vulkan renderer**, not screenshots of third-party shaderpacks. They show work-in-progress rendering and are not claims of complete visual accuracy.
+Veyra's own renderer is where I'm experimenting with **hardware ray tracing**, indirect lighting, soft shadows, reflections, water and glass, materials, and atmospheric effects.
+
+It also includes **FSR 3.1 upscaling**, **Native AA**, and experimental **frame generation**. Which options work depends on your hardware and configuration. Frame generation can make motion appear smoother, but it doesn't increase the game's simulation speed or reduce input latency.
+
+There's still plenty to improve, especially when it comes to image quality, stability, and performance. That's part of why I'm sharing the project now.
+
+### Existing shaderpacks, through Vulkan
+
+I'm also working on a **Legacy renderer** that can load existing Iris/OptiFine-format shaderpacks without Iris or OptiFine being installed.
+
+Some packs already launch and render in Veyra. Compatibility is still a work in progress, though: a pack running doesn't necessarily mean every effect looks or behaves exactly as it does in Iris.
+
+## Native renderer screenshots
+
+Here are five **unedited in-game screenshots from Veyra's native renderer** — not from third-party shaderpacks. They show the renderer as it looks during development.
 
 ![Veyra native renderer — screenshot 1](assets/screenshots/veyra-native-01.png)
 
@@ -25,11 +38,9 @@ These are unedited, in-game captures of **Veyra's native Vulkan renderer**, not 
 
 ![Veyra native renderer — screenshot 5](assets/screenshots/veyra-native-05.png)
 
-*Development screenshots. Rendering, visual quality and performance are subject to change.*
+## Shaderpacks tested so far
 
-## Current shaderpack compatibility baseline
-
-Four shaderpack versions have been manually tested and reported to launch, render and remain playable during normal gameplay on the **primary development PC**:
+These four versions have been **manually tested on my development PC** and have launched, rendered, and remained playable during normal gameplay:
 
 | Shaderpack | Version |
 | --- | --- |
@@ -38,25 +49,28 @@ Four shaderpack versions have been manually tested and reported to launch, rende
 | MakeUp UltraFast | 9.5g |
 | BSL | v10.1.8 |
 
-This intentionally limited baseline **does not guarantee** full visual parity with Iris, perfect behavior for every shader option, long-session stability or compatibility on other hardware. More shaderpacks will be introduced and tested individually. Earlier exploratory runs with additional or older packs are not part of the present compatibility baseline. Third-party shaderpacks are not bundled.
+That's a starting point, not a full compatibility list. I'm still checking visual differences, individual settings, longer sessions, and how things behave on other hardware. Shaderpacks aren't included with Veyra.
 
-## Development status
+## Current development setup
 
-- **Minecraft target:** Java Edition 26.3
+- **Minecraft:** Java Edition 26.3
 - **Mod loader:** NeoForge 26.3.0.45-beta
 - **Java:** 25
-- **Graphics backend:** Vulkan
-- **Primary validation:** Windows x64 with an AMD Radeon RX 9070
-- **Release stage:** experimental development; optimization, visual quality and broader compatibility remain works in progress
+- **Graphics API:** Vulkan
+- **Main test system:** Windows x64, AMD Radeon RX 9070
 
-## Closed alpha — testers wanted
+## Help test Veyra
 
-A limited, manually selected closed alpha is planned. The goal is to test stability, rendering differences, shaderpack behavior, performance, and different GPU configurations.
+I'm preparing a **small closed alpha** and looking for people who want to help test it — especially on different GPUs and with different shaderpacks.
 
-**Interested in testing Veyra?** Join the community Discord and head to **#alpha-testing** to register your interest in the closed alpha and follow tester-selection updates.
+I'm interested in what works, what breaks, how performance compares, and where the visuals need attention. Real feedback will help me figure out what to focus on next.
 
-**[Join the Veyra Discord — Apply for Closed Alpha](https://discord.gg/aFFZhCYBSV)**
+**Want to get involved?** Join the Discord and visit **#alpha-testing** to register your interest.
 
-Alpha access is limited and testers will be selected manually. Joining the server does not guarantee a testing slot. **No public download is available yet.**
+**[Join the Veyra Discord — Closed Alpha](https://discord.gg/aFFZhCYBSV)**
 
-Veyra is an independent project, not affiliated with Mojang Studios or Microsoft.
+I'll select testers manually as the alpha becomes ready. There isn't a public download yet, and joining Discord doesn't guarantee a test spot.
+
+---
+
+Veyra is an independent project and is not affiliated with Mojang Studios or Microsoft.
