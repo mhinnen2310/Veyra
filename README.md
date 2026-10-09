@@ -109,7 +109,7 @@ Longer-term development is intended to cover efficient rendering, a Veyra-native
 
 A small closed alpha is being prepared to gather feedback on image quality, shaderpack behaviour, stability, and performance on different hardware.
 
-To register interest, join the Discord and visit **#alpha-testing**.
+To register interest in alpha testing, join the Veyra Discord.
 
 **[Join the Veyra Discord — Closed Alpha](https://discord.gg/aFFZhCYBSV)**
 
