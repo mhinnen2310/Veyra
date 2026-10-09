@@ -115,6 +115,3 @@ The Veyra team will contact potential testers directly and invite them to comple
 
 **[Join the Veyra Discord — Closed Alpha](https://discord.gg/aFFZhCYBSV)**
 
----
-
-Veyra is an independent project and is not affiliated with Mojang Studios or Microsoft.
