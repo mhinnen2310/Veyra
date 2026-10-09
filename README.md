@@ -6,7 +6,7 @@
 
 Veyra is an independent Minecraft graphics project built around **modern rendering, performance, and future creator tools**. The current development build combines a native Vulkan renderer with experimental support for existing Iris/OptiFine-format shaderpacks.
 
-**At a glance:** Native Vulkan rendering with hardware ray-traced effects · **Existing shaderpacks through Vulkan** · **Optional FSR upscaling for Legacy shaderpacks** · **Experimental frame generation for native and Legacy rendering** · Native-resolution rendering without either feature.
+**At a glance:** Native Vulkan rendering with hardware ray tracing · Support for existing shaderpacks through Vulkan · Optional FSR upscaling across native and Legacy rendering · Experimental frame generation.
 
 The longer-term direction is a graphics platform where shader creators can build **Veyra-native shaders** and players can choose how to use their hardware — from advanced ray-traced effects to more conventional rendering.
 
